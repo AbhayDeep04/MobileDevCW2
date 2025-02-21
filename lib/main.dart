@@ -76,9 +76,6 @@ class HomeScreen extends StatelessWidget {
           final recipe = recipes[index];
           return ListTile(
             title: Text(recipe.title),
-            trailing: recipe.isFavorite
-                ? Icon(Icons.favorite, color: Colors.red)
-                : Icon(Icons.favorite_border),
             onTap: () {
               Navigator.pushNamed(
                 context,
@@ -89,7 +86,6 @@ class HomeScreen extends StatelessWidget {
           );
         },
       ),
-      // Placing a button at the bottom that navigates to the FavoritesScreen.
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.all(16.0),
         child: ElevatedButton.icon(
